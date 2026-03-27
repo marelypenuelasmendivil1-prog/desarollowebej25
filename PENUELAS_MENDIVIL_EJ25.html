@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tablas de multiplicar</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 20px;
+        }
+
+        .tabla {
+            border: 1px solid black;
+            display: inline-block;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Tablas de multiplicar</h1>
+
+<button onclick="generarTablas()">Generar tablas</button>
+
+<div id="resultado"></div>
+
+<script>
+function generarTablas() {
+
+    var resultado = document.getElementById("resultado");
+    resultado.innerHTML = "";
+
+    for (var i = 1; i <= 10; i++) {
+
+        resultado.innerHTML += "<div class='tabla'>";
+        resultado.innerHTML += "<h3>Tabla del " + i + "</h3>";
+
+        for (var j = 1; j <= 10; j++) {
+            resultado.innerHTML += i + " x " + j + " = " + (i*j) + "<br>";
+        }
+
+        resultado.innerHTML += "</div>";
+    }
+}
+</script>
+
+</body>
+</html>
